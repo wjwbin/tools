@@ -14,5 +14,6 @@ tools on linux server
                    when you run exit, need to add "alias exit='~/tools/myexit" in bashrc
   - mygit/myrepo:  a customized git/repo tool, run mygit myrepo to see the usage
   - repo:          repo tool
-  -vimrc:          customized vimrc file, need to run "ln -s ~/tools/vimrc
-               ~/.vimrc" to use
+  - vimrc:         customized vimrc file, need to run "ln -s ~/tools/vimrc
+                   ~/.vimrc" to use
+  - bashrc:        customized bashrc file, need to run "ln -s ~/tools/bashrc ~/.bashrc" to use
