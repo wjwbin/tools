@@ -3,6 +3,7 @@
 import sys
 import os
 import re
+import readline
 
 if __name__ == '__main__':
 	type = raw_input('''Please input init type\n\t1. Branch\n\t2. AU\n''')
