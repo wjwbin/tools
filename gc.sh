@@ -52,9 +52,9 @@ do
   then
     if [ $i = 0 ]
     then
-      find ${absdir} -name "*.cpp" -o -name "*.h" -o -name "*.c" |egrep -v "test" > ${cscope_out}
+      find ${absdir} -name "*.cpp" -o -name "*.h" -o -name "*.c" |egrep -v "/chromatix/03|test" > ${cscope_out}
     else
-      find ${absdir} -name "*.cpp" -o -name "*.h" -o -name "*.c" |egrep -v "test" >> ${cscope_out}
+      find ${absdir} -name "*.cpp" -o -name "*.h" -o -name "*.c" |egrep -v "/chromatix/03|test" >> ${cscope_out}
     fi
   i=$((i+1))
   fi

@@ -86,7 +86,7 @@ highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
 set cc=75
 inoremap jj <ESC>
-set mouse=a
+set mouse=
 set timeoutlen=1000 ttimeoutlen=30
 
 nnoremap fq :qall<CR>

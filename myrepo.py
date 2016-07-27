@@ -10,10 +10,10 @@ if __name__ == '__main__':
 
 	if  type == '1' or re.match(type, 'branch', re.IGNORECASE):
 		branch_name = raw_input('''Please input branch name \n''')
-		command = command_prefix + branch_name + ' --repo-url=~/bin/git-repo/'
+		command = command_prefix + branch_name + ' --repo-url=~/git-repo/'
 	elif type == '2' or re.match(type, 'au', re.IGNORECASE):
 		au_name = raw_input('''Please input AU name \n''')
-		command = command_prefix + ' refs/tags/' + au_name + ' -m versioned.xml --repo-url=~/bin/git-repo/'
+		command = command_prefix + ' refs/tags/' + au_name + ' -m versioned.xml --repo-url=~/git-repo/'
 	else:
 		print "Wrong command"
 
