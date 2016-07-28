@@ -30,10 +30,6 @@ alias rm='rm -rf'
 alias mm='mm -j8'
 http_proxy=http://secure-proxy2.qualcomm.com:9090
 export http_proxy
-export PATH="/usr2/wenbinw/.linuxbrew/bin:$PATH"
-export MANPATH="/usr2/wenbinw/.linuxbrew/share/man:$MANPATH"
-export INFOPATH="/usr2/wenbinw/.linuxbrew/share/info:$INFOPATH"
-export HOMEBREW_CACHE="/usr2/wenbinw/.linuxbrew/cache"
 alias cse='export CSCOPE_DB=${ANDROID_BUILD_TOP}"/cscope.out"'
 alias tnf='touch_new_file.sh'
 alias gchid='scp -p -P 29418 wenbinw@review-android.quicinc.com:hooks/commit-msg .git/hooks/ '
