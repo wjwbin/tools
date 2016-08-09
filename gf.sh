@@ -17,13 +17,16 @@ Dirs=(
   "hardware/libhardware"
 )
 
+#specify the file that need to be excluded
+EXU_FILE="/chromatix/03|test|eztune|af_v2"
+
 for dir in ${Dirs[@]}
 do
   if [ $dir = ${Dirs[0]} ]
   then
     if [ -d $dir ]
     then
-      find ${dir} -name "*.cpp" -o -name "*.h" -o -name "*.c" | egrep -v "/chromatix/03|test|eztune" > ${si_out}
+      find ${dir} -name "*.cpp" -o -name "*.h" -o -name "*.c" | egrep -v ${EXU_FILE} > ${si_out}
     else
       echo "dir: " $dir "not exist"
       echo "" > ${si_out}
@@ -31,7 +34,7 @@ do
   else
     if [ -d $dir ]
     then
-      find ${dir} -name "*.cpp" -o -name "*.h" -o -name "*.c" | egrep -v "/chromatix/03]|test|eztune" >> ${si_out}
+      find ${dir} -name "*.cpp" -o -name "*.h" -o -name "*.c" | egrep -v ${EXU_FILE} >> ${si_out}
     else
       echo "dir: " $dir " not found"
     fi
