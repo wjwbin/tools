@@ -50,9 +50,9 @@ if __name__ == '__main__':
         branch_name = param
         if command == 'push':
             gitcmd = 'git push ' + base_url + ext_url + ' HEAD:refs/for/' + branch_name
-        if command == 'clone':
+        elif command == 'clone':
             gitcmd = 'git clone ' + base_url + ext_url + '.git -b ' + branch_name
-        if command == 'add':
+        elif command == 'add':
             gitcmd = 'git remote add ' + branch_name + " ssh://review-android.quicinc.com:29418/" + ext_url
         else:
             print "Cur command: %s not support" %command
