@@ -18,7 +18,7 @@ Dirs=(
 )
 
 #specify the file that need to be excluded
-EXU_FILE="/chromatix/03|test|eztune|af_v2"
+EXU_FILE="/chromatix/03|test|eztune|/af/"
 
 for dir in ${Dirs[@]}
 do

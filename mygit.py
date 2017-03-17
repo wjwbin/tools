@@ -43,6 +43,8 @@ if __name__ == '__main__':
             ext_url = 'platform/vendor/qcom-proprietary/mm-still'
         elif cwd == 'mm-camera-lib':
             ext_url = 'platform/vendor/qcom-proprietary/mm-camera-lib'
+        elif cwd == 'mm-camerasdk':
+            ext_url = 'platform/vendor/qcom-proprietary/mm-camerasdk'
         else:
             print 'current cwd %s is not support' %cwd
             exit()
