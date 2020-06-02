@@ -73,10 +73,10 @@ if __name__ == '__main__':
     cmdPfx = "repo init -u " + GITQUIC + '/' + MFGITPRJ + ' -b '
     if  type == '1' or re.match(type, 'branch', re.IGNORECASE):
         branch_name = raw_input('''Please input branch name \n''')
-        command = cmdPfx + branch_name + ' -m versioned.xml --repo-url=' + repo_url 
+        command = cmdPfx + branch_name + ' -m versioned.xml'
     elif type == '2' or re.match(type, 'au', re.IGNORECASE):
         au_name = raw_input('''Please input AU name \n''')
-        command = cmdPfx + ' refs/tags/' + au_name + ' -m versioned.xml --repo-url=' + repo_url
+        command = cmdPfx + ' refs/tags/' + au_name + ' -m versioned.xml'
     else:
         print "Wrong command"
 

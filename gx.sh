@@ -48,11 +48,27 @@ printf "adb root\n" >> ld.bat;
 printf "adb wait-for-device\n">> ld.bat;
 printf "adb remount\n">>ld.bat;
 printf "adb wait-for-device\n">>ld.bat;
+for i in `find  system -newer $REFERENCE_TIMESTAMP_FILE -type f -name *.so -a -newer system.img -type f -name *.so`;
+do
+	echo adb push $i `dirname $i`>>ld.bat;
+done;
 for i in `find  vendor -newer $REFERENCE_TIMESTAMP_FILE -type f -name *.so -a -newer system.img -type f -name *.so`;
 do
 	echo adb push $i `dirname $i`>>ld.bat;
 done;
-for i in `find  vendor -newer $REFERENCE_TIMESTAMP_FILE -type f -name "*.bin" -a -newer system.img -type f -name "*.bin"`;
+for i in `find  vendor -newer $REFERENCE_TIMESTAMP_FILE -type f -name *.bin -a -newer system.img -type f -name *.bin`;
+do
+	echo adb push $i `dirname $i`>>ld.bat;
+done;
+for i in `find  system -newer $REFERENCE_TIMESTAMP_FILE -type f -name *.bin -a -newer system.img -type f -name *.bin`;
+do
+	echo adb push $i `dirname $i`>>ld.bat;
+done;
+for i in `find  vendor -newer $REFERENCE_TIMESTAMP_FILE -type f -name *.elf -a -newer system.img -type f -name *.elf`;
+do
+	echo adb push $i `dirname $i`>>ld.bat;
+done;
+for i in `find  system -newer $REFERENCE_TIMESTAMP_FILE -type f -name *.elf -a -newer system.img -type f -name *.elf`;
 do
 	echo adb push $i `dirname $i`>>ld.bat;
 done;

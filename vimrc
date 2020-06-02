@@ -48,9 +48,9 @@ syntax on
 filetype plugin indent on
 set nu
 set nocompatible
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 set expandtab
 %ret!
 set cindent
@@ -75,7 +75,8 @@ let Tlist_File_Fold_Auto_Close=0
 let Tlist_Show_One_File = 1
 set ut=500
 nnoremap tl :Tlist<CR>
-colorscheme mycolor
+"colorscheme mycolor
+colorscheme default
 set t_kb=
 set backspace=2
 set list
@@ -84,7 +85,7 @@ set listchars=tab:>-,trail:-
 "autocmd FileType c,cpp set shiftwidth=2| set expandtab
 highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
-set cc=75
+set cc=128
 inoremap jj <ESC>
 set mouse=
 set timeoutlen=1000 ttimeoutlen=30

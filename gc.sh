@@ -39,9 +39,21 @@ Dirs=(
   "vendor/qcom/proprietary/mm-camera-lib"
   "vendor/qcom/proprietary/mm-camera-core"
   "vendor/qcom/proprietary/mm-camerasdk"
+  "vendor/qcom/proprietary/camx"
+  "vendor/qcom/proprietary/chi-cdk"
+  "vendor/qcom/proprietary/camx-lib-stats"
+  "vendor/qcom/proprietary/camx-lib-3a"
   "hardware/qcom/camera/QCamera2"
   "kernel/drivers/media/platform/msm/camera_v2"
   "kernel/include/media"
+  "mm-camera-lib"
+  "mm-camera"
+  "mm-3a-core"
+  "mm-camerasdk"
+  "camx-lib-3a"
+  "camx-lib-stats"
+  "chi-cdk"
+  "camx"
 )
 
 i=0
@@ -52,16 +64,16 @@ do
   then
     if [ $i = 0 ]
     then
-      find ${absdir} -name "*.cpp" -o -name "*.h" -o -name "*.c" |egrep -v "/chromatix/03|test|/af/" > ${cscope_out}
+      find ${absdir} -name "*.cpp" -o -name "*.h" -o -name "*.c" -o -name "*.xml" |egrep -v "/chromatix/03|test" > ${cscope_out}
     else
-      find ${absdir} -name "*.cpp" -o -name "*.h" -o -name "*.c" |egrep -v "/chromatix/03|test|/af/" >> ${cscope_out}
+      find ${absdir} -name "*.cpp" -o -name "*.h" -o -name "*.c" -o -name "*.xml" |egrep -v "/chromatix/03|test" >> ${cscope_out}
     fi
   i=$((i+1))
   fi
 done
 
 cscope -bkq -i ${cscope_out}
-ctags --c++-kinds=+lp -L ${cscope_out}
+ctags  -L ${cscope_out}
 
 curpath=`pwd`
 if [ $curpath != $CS_TOP ]
