@@ -7,7 +7,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 " alternatively, pass a path where Vundle should install plugins
 "let path = '~/some/path/here'
@@ -22,6 +22,7 @@ Plugin 'gmarik/vundle'
 "Plugin 'tpope/vim-fugitive'
 "Plugin 'Lokaltog/vim-easymotion'
 "Plugin 'tpope/vim-rails.git'
+Plugin 'VundleVim/Vundle.vim'
 Bundle 'taglist.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle "kien/ctrlp.vim"
